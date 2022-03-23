@@ -10,7 +10,7 @@ public class Conta {
     void visualizarSaldo(){
         System.out.println("Saldo atual na conta" +numero + ": R$ " +this.saldo);
     }
-    boolean depositar(double valor){
+    public boolean depositar(double valor){
         //if(valor>0){
           //  saldo = saldo + valor;
           //  return true;
@@ -26,7 +26,7 @@ public class Conta {
        
 
     }
-    boolean sacar(double valor){
+    public boolean sacar(double valor){
         //if(valor<=saldo){
           //  saldo = saldo - valor;
         //}  
@@ -36,8 +36,8 @@ public class Conta {
         return true;
 
     }
-    boolean transferirDinheiro(double valor, Conta destino){
-        if(!this.sacar(valor)) return false;
+    public boolean transferirDinheiro(double valor, Conta destino){
+        if(!sacar(valor)) return false;
 
         if(!destino.depositar(valor)) return false;
         return true;
