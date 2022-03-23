@@ -1,11 +1,13 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        Conta c1 = new Conta();
-        c1.depositar(250);
-        if(c1.sacar(200)){
-            System.out.println("Você sacou 200!");
-        }
-        c1.depositar(200);
-        c1.visualizarSaldo();
+        Cliente c1 = new Cliente();
+        c1.setNome("Gabriel Prande");
+        c1.setCpf("123456789");
+        c1.setEmail("bielprande@gmail.com");
+        c1.setConta(new Conta());
+        System.out.println("Nome do cliente: " + c1.getNome());
+        System.out.println("E-mail do cliente: " + c1.getEmail());
+        System.out.println("CPF do cliente: " + c1.getCpf());
+        c1.getConta().visualizarSaldo();
     }
 }

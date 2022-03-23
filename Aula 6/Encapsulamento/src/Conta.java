@@ -1,9 +1,7 @@
 public class Conta {
     // atributos da nossa classe
     private int numero;
-    private String titular;
     private double saldo;
-    private String cpf;
 
     // Métodos da classe 
 
