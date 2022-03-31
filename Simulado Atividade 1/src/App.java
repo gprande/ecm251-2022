@@ -1,10 +1,10 @@
 public class App {
     public static void main(String[] args) throws Exception {
         public void run(){
-            Usuario Usuario = new Usuario("Midoria", "123456", "allmight_wannbe@gmail.com");
-            Conta conta = new Conta(Usuario, 1234);
+            Usuario Usuario1 = new Usuario("Prandezito", "prandezito123@gmail.com");
+            Conta conta1 = new Conta(Usuario, 1234);
     
-            System.out.println(conta);
+            System.out.println(conta1);
     
             Transacao QRCode = new Transacao(200, 
             conta.depositar(300);
