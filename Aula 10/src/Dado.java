@@ -2,7 +2,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Dado {
     private String id;
-    private int face;
+    protected int face;
 
     public Dado(String id) {
         this.id = id;
