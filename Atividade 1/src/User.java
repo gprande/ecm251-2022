@@ -18,7 +18,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "Nome de Usuário: " + nome + ", Veículo: " + veiculo + ". O Contador está em " + contador + ".";
+        return "Nome de Usuário: " + nome + ", Veículo: " + veiculo + ".";
     }
 
     public void emprestar(Veiculos emprestado) {
