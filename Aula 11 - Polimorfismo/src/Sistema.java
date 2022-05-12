@@ -10,13 +10,18 @@ public class Sistema {
         String resultado = avaliaJogadas(jogada1, jogada2);
         //Exibição do resultado
         System.out.println("Resultado:" + resultado);
+        System.out.println(jogada1);
+        System.out.println("   VERSUS   ");
+        System.out.println(jogada2);
     }
 
     private static Jogada sortearJogada() {
-        Jogada jogadas[] = new Jogada[3];
+        Jogada jogadas[] = new Jogada[5];
         jogadas[0] = new Pedra();
         jogadas[1] = new Papel();
         jogadas[2] = new Tesoura();
+        jogadas[3] = new Spoke();
+        jogadas[4] = new Lagarto();
         return jogadas[ThreadLocalRandom.current().nextInt(jogadas.length)];
     }
 

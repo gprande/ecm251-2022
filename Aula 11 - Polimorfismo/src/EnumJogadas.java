@@ -1,3 +1,3 @@
 public enum EnumJogadas {
-    PEDRA, PAPEL, TESOURA
+    PEDRA, PAPEL, TESOURA, SPOKE, LAGARTO;
 }
