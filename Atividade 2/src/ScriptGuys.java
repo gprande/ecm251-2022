@@ -1,12 +1,12 @@
 public class ScriptGuys extends Membros {
 
-    public ScriptGuys(string username, string email, string funcao) {
+    public ScriptGuys(String username, String email) {
         super(username, email, "Script Guy!");
     }
 
     @Override
-    public string scriptguys(Atividades atividade){
-        if(atividade = "EXTRA"){
+    public String mensagem(Membros horario){
+        if(horario.equals("Atividade Extra")){{
             System.out.println("QU3Ro_S3us_r3curs0s.py");
         }
         else

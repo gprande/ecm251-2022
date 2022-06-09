@@ -1,12 +1,12 @@
 public class MobileMembers extends Membros {
 
-    public MobileMembers(string username, string email, string funcao) {
+    public MobileMembers(String username, String email) {
         super(username, email, "Mobile Members!");
     }
     
     @Override
-    public string mobilemembers(Atividades atividade){
-        if(atividade="EXTRA"){
+    public String mensagem(Membros horario){
+        if(horario.equals("Atividade Extra")){{
             System.out.println("Happy_C0d1ng. Maskers");
         }
         else
