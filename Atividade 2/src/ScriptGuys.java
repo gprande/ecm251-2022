@@ -5,7 +5,7 @@ public class ScriptGuys extends Membros {
     }
 
     @Override
-    public String mensagem(Membros horario){
+    public String mensagem(String horario){
         if(horario.equals("Atividade Extra")){{
             System.out.println("QU3Ro_S3us_r3curs0s.py");
         }

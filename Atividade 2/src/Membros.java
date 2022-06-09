@@ -1,6 +1,4 @@
-import java.util.concurrent.ThreadLocalRandom;
-
-public class Membros implements PostarMensagem{
+public abstract class Membros implements PostarMensagem{
     private String username;
     private String email;
     private String funcao;

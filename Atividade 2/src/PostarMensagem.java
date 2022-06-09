@@ -1,3 +1,3 @@
 public interface PostarMensagem {
-    String mensagem(Membros horario);
+    String mensagem(String horario);
 }

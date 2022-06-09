@@ -5,7 +5,7 @@ public class MobileMembers extends Membros {
     }
     
     @Override
-    public String mensagem(Membros horario){
+    public String mensagem(String horario){
         if(horario.equals("Atividade Extra")){{
             System.out.println("Happy_C0d1ng. Maskers");
         }

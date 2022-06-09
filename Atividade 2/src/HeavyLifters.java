@@ -5,7 +5,7 @@ public class HeavyLifters extends Membros {
     }
 
     @Override
-    public String mensagem(Membros horario){
+    public String mensagem(String horario){
         if(horario.equals("Atividade Extra")){
             System.out.println("N00b_qu3_n_Se_r3pita.bat");
         }
