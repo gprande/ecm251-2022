@@ -17,4 +17,7 @@ class Carrinho():
         self._itens.append(item)
 
     def remover(self, item):
-        self._itens.pop(item)
+        if item in self._itens:
+            self._itens.remove(item)
+        else:
+            print('O Carrinho está vazio')
