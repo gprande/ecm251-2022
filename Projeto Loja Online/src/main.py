@@ -3,15 +3,15 @@ from Modelos.item import Item
 from Modelos.carrinho import Carrinho
 
 joguitos = [
-Item("Cities: Skylines","Cities: Skylines é uma versão moderna dos simuladores de cidade clássicos.",74.99,"./assets/cities.png"),
-Item("Phasmophobia","Phasmophobia é um jogo multijogador online (4 jogadores co-op) de terror psicológico.",27.90,"./assets/phasmo.png"),
-Item("Stardew Valley","Será que você vai aprender a viver da terra, a transformar esse matagal em um próspero lar?",24.99,"./assets/stardew.jpg"),
-Item("Devour","Corra. Grite. Esconda-se. Sobreviva a qualquer custo!",10.89,"./assets/devour.jpg"),
-Item("Rise of the Tomb Raider","Explore a Mansão Croft na nova história “Laços de Sangue” e a defenda contra uma invasão zumbi em “Pesadelo de Lara”.",29.99,"./assets/rise.jpg"),
-Item("Dead by Daylight","DBD é um jogo multijogador de terror em que você deve fugir do assassino e evitar ser pego e morto.",49.99,"./assets/dbd.jpg"),
-Item("Minecraft Bedrock & Java Edition","Minecraft Launcher é seu portal para o universo do Minecraft",129.00,"./assets/mine.jpg"),
-Item("PowerWash Simulator","Se livre de preocupações com os sons suaves de água em alta pressão.",74.90,"./assets/power.jpg"),
-Item("Forza Horizon 5","Sua maior aventura Horizon te espera! Explore o mundo aberto vibrante e em constante evolução nas terras mexicanas.",249.00,"./assets/forza.jpg")]
+Item("Cities: Skylines","Cities: Skylines é uma versão moderna dos simuladores de cidade clássicos.","",74.99,"./assets/cities.jpg"),
+Item("Phasmophobia","Phasmophobia é um jogo multijogador online (4 jogadores co-op) de terror psicológico.","",27.90,"./assets/phasmo.png"),
+Item("Stardew Valley","Será que você vai aprender a viver da terra, a transformar esse matagal em um próspero lar?","",24.99,"./assets/stardew.jpg"),
+Item("Devour","Corra. Grite. Esconda-se. Sobreviva a qualquer custo!","",10.89,"./assets/devour.jpg"),
+Item("Rise of the Tomb Raider","Explore a Mansão Croft na nova história “Laços de Sangue” e a defenda contra uma invasão zumbi em “Pesadelo de Lara”.","",29.99,"./assets/rise.jpg"),
+Item("Dead by Daylight","DBD é um jogo multijogador de terror em que você deve fugir do assassino e evitar ser pego e morto.","",49.99,"./assets/dbd.jpg"),
+Item("Minecraft Bedrock & Java Edition","Minecraft Launcher é seu portal para o universo do Minecraft","",129.00,"./assets/mine.jpg"),
+Item("PowerWash Simulator","Se livre de preocupações com os sons suaves de água em alta pressão.","",74.90,"./assets/power.jpg"),
+Item("Forza Horizon 5","Sua maior aventura Horizon te espera! Explore o mundo aberto vibrante e em constante evolução nas terras mexicanas.","",249.00,"./assets/forza.jpg")]
 
 st.set_page_config(page_title="Prandelitz Store",layout="centered",initial_sidebar_state="collapsed",menu_items=None)
 
