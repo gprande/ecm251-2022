@@ -28,6 +28,6 @@ class Carrinho():
                 contador += 1
         return contador
 
-    def exibir_Itens(self):
-        for item in self._itens:
-            return item
+    def exibir_Itens(self,item):
+        return self._itens[item]
+    
