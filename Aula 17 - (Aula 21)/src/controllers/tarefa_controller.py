@@ -18,3 +18,19 @@ class TarefaController:
             if tarefa.get_Concluida():
                 total += 1
         return total
+
+    def get_tarefas(self):
+        tarefas = []
+        for tarefa in self._lista_de_tarefas:
+            tarefas.append(
+                {
+                    "descricao": tarefa.get_Descricao(),
+                    "status":    tarefa.get_Concluida()
+                }
+            )
+        return tarefas
+
+    def mudar_status(self, indice):
+        self._lista_de_tarefas[indice].set_Concluida(
+            not self._lista_de_tarefas[indice].get_Concluida()
+        )
