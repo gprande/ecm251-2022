@@ -65,9 +65,9 @@ def check_password():
         return True
 
 if check_password():
-    store,cart = st.tabs(["Loja","Carrinho"])    
-    with store:
-        st.subheader("Destaques")
+    homepage,cart,profile = st.tabs(["Loja","Carrinho","Perfil"])    
+    with homepage:
+        st.subheader("Veja nossas novidades")
         c1,c2,c3 = st.columns(3,gap="small")
         c4,c5,c6 = st.columns(3,gap="small")
         c7,c8,c9 = st.columns(3,gap="small")
@@ -99,11 +99,49 @@ if check_password():
                 st.text(" ")
                 i+=1
         with col3:
-            st.write("Resumo da Compra:")
-            st.write("Quant. de itens: "+str(st.session_state["carrinho"].get_Quantidade_Itens()))
+            st.write("Sua Compra:")
+            st.write("Itens: "+str(st.session_state["carrinho"].get_Quantidade_Itens()))
             st.write("Valor total: R$ "+str(st.session_state["carrinho"].get_Valor_Total()))
             if st.button("Pagamento",key = ("pagamento")):
                 st.write("Aguarde")
+    with profile:
+        st.subheader("Bem-vindo ao seu perfil")
+        coluna1,coluna2,coluna3 = st.columns(3,gap="small")
+        st.subheader("Meus jogos:")
+        coluna4,coluna5,coluna6 = st.columns(3,gap="small")
+        with coluna1:
+            st.image("./assets/joseph.jpg")
+        with coluna2:
+            st.write("prandinho_matadorBR")
+            st.write()
+            st.text("Gabriel  São Paulo, Brazil" )
+            st.write("")
+            st.write("")
+            st.write("")
+            st.text("Nenhuma descrição.")
+            st.write("")
+            st.write("")
+            st.text("🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮")
+        with coluna3:
+            st.write("Caso queira editar seu perfil, clique aqui:")
+            st.write("")
+            if st.button('Editar perfil'):
+               st.text('Aguarde')
+        mygames = [
+                    Item("Garry's Mod","Garry's Mod é um jogo sandbox de física.","10",25.99,"./assets/garrys.jpg"),
+                    Item("Spore","Seja o arquiteto do seu próprio universo.","11",59.90,"./assets/spore.jpg"),
+                    Item("Case: Animatronics","CASE: Animatronics é um desafiador e assustador jogo de terror furtivo","12",19.99,"./assets/case.jpg")
+                    ]
+        with coluna4:
+            st.image(mygames[2].get_Imagem())
+            st.text(mygames[2].get_Nome())
+        with coluna5:
+            st.image(mygames[1].get_Imagem())
+            st.text(mygames[1].get_Nome())
+        with coluna6:
+            st.image(mygames[0].get_Imagem())
+            st.text(mygames[0].get_Nome())
+
 
 hide_menu_style = """
         <style>
