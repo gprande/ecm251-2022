@@ -1,5 +1,4 @@
 import streamlit as st
-from controllers.user_controller import UserController
 
 def accept_register(new_user,new_email,new_password,new_cpf,new_birthdate,new_username):
     if st.session_state["users_db"].add_user(new_user,
@@ -10,7 +9,7 @@ def accept_register(new_user,new_email,new_password,new_cpf,new_birthdate,new_us
                                             new_username):
         st.write("Registered successfully")
     else:
-        st.write("Não foi possível realizar o cadastro, por favor, verifique seus dados.")
+        st.write("We couldn't get you registered, please try again later")
 
 class Register():
     def __init__(self) -> None:       
