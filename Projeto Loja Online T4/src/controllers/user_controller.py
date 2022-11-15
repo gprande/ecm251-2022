@@ -17,7 +17,7 @@ def update_user_secrets(user_db):
         login_info_read = login_info.read()
         login_info.close()
         if (f'{username} =' in login_info_read) or (f'{email[0]} =' in login_info_read):
-                st.write(f'Username/E-mail já existe')
+                st.write(f'Username/E-mail already exists')
                 status_user_update = False
         else:
             login_info = open(".streamlit/secrets.toml",'a')

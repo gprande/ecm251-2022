@@ -44,7 +44,7 @@ class Profile:
             st.text(mygames[0].get_Name())
 
         st.write("")
-        st.write("Update here your email or password")
+        st.title("Update here your email or password")
         st.write("")
         
         new_user_email = st.text_input("Enter your e-mail address:",key="new_user_email")

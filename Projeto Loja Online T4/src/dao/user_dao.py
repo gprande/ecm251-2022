@@ -41,7 +41,7 @@ class User_DAO:
         """, (user.get_Username(), 
               user.get_Name(), 
               user.get_Email(), 
-              user.get_Senha(), 
+              user.get_Password(), 
               user.get_Cpf(), 
               user.get_Birthdate()))
         self.conn.commit()

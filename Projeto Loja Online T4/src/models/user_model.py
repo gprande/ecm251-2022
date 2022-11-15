@@ -1,17 +1,12 @@
 class User():
-    def __init__(self, username, 
-                 email, 
-                 password, 
-                 cpf, 
-                 birthdate, 
-                 name):
+    def __init__(self, username, email, password, cpf, birthdate, name):
         self._username = username
         self._email = email
         self._password = password
         self._cpf = cpf
         self._birthdate = birthdate
         self._name = name
-        self._contador = 0
+        self._count = 0
     
     def get_Username(self):
         return self._username
@@ -38,4 +33,4 @@ class User():
         self._password = password
     
     def __str__(self) -> str:
-        return f'Username:"{self._username}", E-mail:"{self._email}", Password:"{self._password}", Nome:"{self._name}", Nascimento:"{self._birthdate}", CPF:"{self._cpf}".'
+        return f'Username:"{self._username}", E-mail:"{self._email}", Password:"{self._password}", Name:"{self._name}", Birth Date:"{self._birthdate}", CPF:"{self._cpf}".'
