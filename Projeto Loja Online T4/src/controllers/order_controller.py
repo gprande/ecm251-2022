@@ -1,7 +1,7 @@
 from models.order_model import Order
 from dao.order_dao import Order_DAO
 
-class Pedido_Control:
+class Order_Control:
     def __init__(self) -> None:
         self.order_db = Order_DAO()
 
