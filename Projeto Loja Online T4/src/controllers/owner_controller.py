@@ -18,6 +18,6 @@ class Owner:
                                                             new_product_keyword,
                                                             float(new_product_value),
                                                             new_product_image):
-                st.write("Produto cadastrado com sucesso no banco de dados!")
+                st.write("Product succesfully added to database")
             else:
-                st.write("Não foi possível realizar o cadastro, favor verificar se o produto já não existe no sistema!")
+                st.write("We couldn't register this new product, please check if it already exists")
