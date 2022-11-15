@@ -12,8 +12,8 @@ class Info:
         if "var_columns" not in st.session_state:
             st.session_state["var_columns"] = 0
             
-        quant_produtos = st.session_state["products"].get_Quantidade_Produtos()
-        for st.session_state["var_columns"] in range(quant_produtos):
+        product_qty = st.session_state["products"].get_Product_Qty()
+        for st.session_state["var_columns"] in range(product_qty):
             with column[st.session_state["var_columns"]]:
                 st.image(st.session_state["products"].get_Product(st.session_state["var_columns"]).get_Image(), st.session_state["products"].get_Product(st.session_state["var_columns"]).get_Description())
                 st.write("R$ "+ str(st.session_state["products"].get_Product(st.session_state["var_columns"]).get_Value()))
