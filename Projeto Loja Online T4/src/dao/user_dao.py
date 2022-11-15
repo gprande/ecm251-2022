@@ -22,28 +22,28 @@ class User_DAO:
         self.cursor.execute("""
             SELECT * FROM Usuarios;
         """)
-        resultados = []
-        for resultado in self.cursor.fetchall():
-            resultados.append(User(username = resultado[0],
-                                    name = resultado[1],
-                                    email = resultado[2],
-                                    password = resultado[3],
-                                    cpf = resultado[4],
-                                    birthdate = resultado[5]))
+        results = []
+        for result in self.cursor.fetchall():
+            results.append(User(username = result[0],
+                                    name = result[1],
+                                    email = result[2],
+                                    password = result[3],
+                                    cpf = result[4],
+                                    birthdate = result[5]))
         self.cursor.close()
-        return resultados
+        return results
 
-    def add_users(self,usuario):
+    def add_users(self,user):
         self.cursor = self.conn.cursor()
         self.cursor.execute("""
             INSERT INTO Usuarios (username, name, email, password, cpf, birthdate)
             VALUES(?,?,?,?,?,?);
-        """, (usuario.get_Username(), 
-              usuario.get_Name(), 
-              usuario.get_Email(), 
-              usuario.get_Senha(), 
-              usuario.get_Cpf(), 
-              usuario.get_Birthdate()))
+        """, (user.get_Username(), 
+              user.get_Name(), 
+              user.get_Email(), 
+              user.get_Senha(), 
+              user.get_Cpf(), 
+              user.get_Birthdate()))
         self.conn.commit()
         self.cursor.close()
         
@@ -53,24 +53,24 @@ class User_DAO:
             SELECT * FROM Usuarios WHERE username == '{username}';
         """)
         item = None
-        resultado = self.cursor.fetchone()
-        if resultado != None:
-            item = User(username = resultado[0],
-                        name = resultado[1],
-                        email = resultado[2],
-                        password = resultado[3],
-                        cpf = resultado[4],
-                        birthdate = resultado[5])
+        result = self.cursor.fetchone()
+        if result != None:
+            item = User(username = result[0],
+                        name = result[1],
+                        email = result[2],
+                        password = result[3],
+                        cpf = result[4],
+                        birthdate = result[5])
         self.cursor.close()
         return item
     
-    def update_users(self,usuario):
+    def update_users(self,user):
         try:
             self.cursor = self.conn.cursor()
             self.cursor.execute(f"""
                 UPDATE Usuarios 
-                SET email = '{usuario.get_Email()}', password = '{usuario.get_Password()}'
-                WHERE username == '{usuario.get_Username()}';
+                SET email = '{user.get_Email()}', password = '{user.get_Password()}'
+                WHERE username == '{user.get_Username()}';
             """)
             self.conn.commit()
             self.cursor.close()

@@ -1,4 +1,5 @@
 import streamlit as st
+from controllers.user_controller import UserController
 
 def accept_register(new_user,new_email,new_password,new_cpf,new_birthdate,new_username):
     if st.session_state["users_db"].add_user(new_user,
