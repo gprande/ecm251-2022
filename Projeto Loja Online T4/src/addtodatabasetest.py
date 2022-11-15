@@ -17,6 +17,6 @@ Products_loja = [
                     Product("Forza Horizon 5","Explore o mundo aberto vibrante em terras mexicanas.","9",249.00,"./assets/forza.jpg")]
 
 for jogo in Products_loja:
-    data.add_Product(jogo)
+    data.add_item(jogo)
 
 jogos_data = data.get_all()
